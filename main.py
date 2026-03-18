@@ -15,7 +15,11 @@ collection = db.sensores
 
 @app.get("/")
 def root():
-    return {"mensaje":"API funcionando"}
+    return {
+ "temperatura": 24,
+ "humedad": 60
+}
+
 
 @app.post("/sensor")
 def guardar_sensor(data: dict):
